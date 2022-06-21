@@ -1,0 +1,662 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(76, 72, 72);
+  overflow-x: hidden;
+}
+
+.main-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Row One */
+
+.row-one {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15em;
+}
+
+/* Green Neon Button Start */
+
+.green-neon-btn {
+  font-size: 1.25em;
+  text-decoration: none;
+  display: inline-block;
+  border: 4px solid lightgreen;
+  color: rgb(133, 216, 135);
+  border-radius: 4px;
+  padding: 0.125em 0.5em;
+  text-shadow: 0 0 0.125em lightgreen, 0 0 0.45em lightgreen;
+  box-shadow: inset 0 0 0.5em 0 lightgreen, 0 0 0.5em 0 lightgreen;
+  position: relative;
+}
+
+.green-neon-btn::before {
+  content: "";
+  position: absolute;
+  background: lightgreen;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(2em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.green-neon-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 1em 0.5em lightgreen;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.green-neon-btn:hover {
+  background: lightgreen;
+  color: rgb(32, 130, 68);
+  text-shadow: 0;
+}
+
+.green-neon-btn:hover::before {
+  opacity: 1;
+}
+
+.green-neon-btn:hover::after {
+  opacity: 1;
+}
+
+/* Green Neon Button End */
+
+/* Pink Neon Button Start */
+
+.pink-neon-btn {
+  font-size: 1.25em;
+  text-decoration: none;
+  display: inline-block;
+  border: 4px solid rgb(253, 93, 226);
+  color: rgb(242, 73, 214);
+  border-radius: 4px;
+  padding: 0.125em 0.5em;
+  text-shadow: 0 0 0.125em rgb(253, 93, 226), 0 0 0.45em rgb(253, 93, 226);
+  box-shadow: inset 0 0 0.5em 0 rgb(253, 93, 226), 0 0 0.5em 0 rgb(253, 93, 226);
+  position: relative;
+}
+
+.pink-neon-btn::before {
+  content: "";
+  position: absolute;
+  background: rgb(253, 93, 226);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(2em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.pink-neon-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 1em 0.5em rgb(253, 93, 226);
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.pink-neon-btn:hover {
+  background: rgb(253, 93, 226);
+  color: rgb(191, 24, 163);
+  text-shadow: 0;
+}
+
+.pink-neon-btn:hover::before {
+  opacity: 1;
+}
+
+.pink-neon-btn:hover::after {
+  opacity: 1;
+}
+
+/* Pink Neon Button End */
+
+/* Bold Button Start*/
+
+.font-weight-btn {
+  font-size: 1.25em;
+  padding: 0.05em 0.75em;
+  text-decoration: none;
+  color: rgb(215, 236, 255);
+  border: 2px solid rgb(215, 236, 255);
+  border-radius: 4px;
+  line-height: 30px;
+}
+
+.font-weight-btn:hover {
+  font-size: 1.4em;
+  border: 3px solid rgb(215, 236, 255);
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: 0.7s ease;
+  line-height: 30px;
+}
+
+/* Bold Button End */
+
+/* Split Color Button Start*/
+
+.split-clr-btn {
+  font-size: 1.25em;
+  padding: 0.05em 0.75em;
+  text-decoration: none;
+  color: rgb(37, 252, 17);
+  border: 2px solid rgb(37, 252, 17);
+  border-radius: 4px;
+  line-height: 30px;
+}
+
+.split-clr-btn:hover {
+  box-shadow: inset 150px 0 rgb(37, 252, 17);
+  color: rgb(76, 72, 72);
+  transition: 0.4s;
+}
+
+/* Split Color Button End */
+
+/* Pulse Button Start */
+
+.pulse-btn {
+  font-size: 1.25em;
+  padding: 0.05em 0.75em;
+  text-decoration: none;
+  color: rgb(247, 255, 19);
+  border: 2px solid rgb(247, 255, 19);
+  border-radius: 4px;
+  line-height: 30px;
+  transition: 0.5s;
+}
+
+.pulse-btn:hover {
+  animation: pulse 1s infinite;
+  color: rgb(247, 255, 19);
+  border: 2px solid rgb(247, 255, 19);
+  font-weight: 400;
+  transition: 0.5s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Pulse Button End */
+
+/* Border Button Start */
+
+.border-btn {
+  font-size: 1.25em;
+  padding: 0.05em 0.75em;
+  text-decoration: none;
+  border-radius: 4px;
+  border-top: 2px solid #c2762b;
+  border-right: 2px solid #aac32b;
+  border-bottom: 2px solid #c2c2c2;
+  border-left: 2px solid #7a3f04;
+  color: rgb(215, 236, 255);
+  line-height: 30px;
+}
+
+.border-btn:hover {
+  border-bottom: 2px solid #c2762b;
+  border-left: 2px solid #aac32b;
+  border-top: 2px solid #c2c2c2;
+  border-right: 2px solid #7a3f04;
+  line-height: 30px;
+  color: rgb(215, 236, 255);
+  transition: 0.3s ease;
+}
+
+/* Border Button End */
+
+/* Border-2 Button Start */
+
+.border-btn2 {
+  font-size: 1.25em;
+  padding: 0.05em 0.75em;
+  text-decoration: none;
+  background-color: rgb(39, 135, 244);
+  color: rgb(215, 236, 255);
+  border-radius: 4px;
+  line-height: 34px;
+}
+
+.border-btn2:hover {
+  border-top: 2px solid rgb(39, 135, 244);
+  border-bottom: 2px solid rgb(39, 135, 244);
+  line-height: 30px;
+  background: transparent;
+  color: rgb(215, 236, 255);
+  transition: 0.2s ease;
+}
+
+/* Border-2 Button End */
+
+/* Row Two */
+
+.row-two {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15em;
+}
+
+button {
+  padding: 12px 24px;
+  margin: 2em 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.second-row-btn {
+  font-size: 16px;
+  background-color: rgb(40, 238, 238);
+  color: #2974c4;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn1:hover {
+  transform: rotateY(35deg) rotateX(35deg);
+  transition: 0.4s ease;
+  box-shadow: 0 -10px 30px aqua;
+}
+
+.btn2:hover {
+  transform: rotateY(-35deg) rotateX(35deg);
+  transition: 0.4s ease;
+  box-shadow: 0 -10px 30px aqua;
+}
+
+.btn3:hover {
+  transform: rotateY(35deg) rotateY(10deg);
+  transition: 0.3s ease;
+  box-shadow: 0 0px 20px aqua;
+}
+
+.btn4:hover {
+  transform: rotate3d(1, 0, 1, 360deg);
+  background-color: #fbfcfc;
+  transition: 1s ease-in;
+}
+
+.btn5:hover {
+  transform: rotate3d(0, -1, 0.5, 1turn);
+  transition: 1.5s;
+}
+
+.btn6:hover {
+  box-shadow: 0 0 20px 10px rgb(37, 155, 155);
+  transform: rotateY(30deg) rotateX(360deg);
+  transition: 1s;
+}
+
+.btn7:hover {
+  box-shadow: 4px 4px aqua;
+  transition: 0.2s;
+  background: transparent;
+  color: aqua;
+}
+
+.btn8:hover {
+  box-shadow: 6px 6px rgb(19, 105, 105), -6px -6px rgb(44, 181, 181);
+  transition: 0.2s;
+}
+
+/* Row Three */
+
+.row-three {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15em;
+}
+
+/* Delete Button Start */
+
+.delete-btn {
+  font-size: 1.25em;
+  padding: 0.125em 0.75em;
+  text-decoration: none;
+  color: rgb(215, 236, 255);
+  border: 2px solid rgb(245, 17, 17);
+  line-height: 30px;
+  position: relative;
+  background-color: rgb(245, 17, 17);
+}
+
+.delete-btn:hover {
+  border: none;
+  background-color: transparent;
+  line-height: 32px;
+}
+
+.delete-btn::before,
+.delete-btn::after {
+  content: "";
+  position: absolute;
+  top: 21%;
+  left: 15%;
+  width: 70%;
+  height: 50%;
+  z-index: -1;
+  transition: all 0.4s;
+  border: 1px solid rgb(245, 17, 17);
+  background-color: rgb(245, 17, 17);
+}
+
+.delete-btn:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgb(245, 17, 17);
+}
+.delete-btn:hover::after {
+  transform: rotate(45deg);
+  background-color: rgb(245, 17, 17);
+}
+
+/* Delete Button End */
+
+/* Accept Button Start */
+
+.accept-btn {
+  font-size: 1.25em;
+  padding: 0.125em 0.75em;
+  text-decoration: none;
+  color: rgb(254, 254, 254);
+  border: 2px solid rgb(3, 212, 83);
+  line-height: 30px;
+  position: relative;
+  background-color: rgb(3, 212, 83);
+}
+
+.accept-btn:hover {
+  border: none;
+  background-color: transparent;
+  line-height: 34px;
+}
+
+.accept-btn::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 26%;
+  width: 70%;
+  height: 50%;
+  z-index: -1;
+  transition: all 0.4s;
+  border: 1px solid rgb(3, 212, 83);
+  background-color: rgb(3, 212, 83);
+}
+
+.accept-btn::after {
+  content: "";
+  position: absolute;
+  top: 6%;
+  left: 10%;
+  width: 30%;
+  height: 50%;
+  z-index: -1;
+  transition: all 0.4s;
+  border: 1px solid rgb(3, 212, 83);
+  background-color: rgb(3, 212, 83);
+}
+
+.accept-btn:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgb(3, 212, 83);
+}
+.accept-btn:hover::after {
+  transform: rotate(45deg);
+  background-color: rgb(3, 212, 83);
+}
+
+/* Accept Button End */
+
+/* Linear Button Start*/
+
+.linear-btn {
+  font-size: 1.25em;
+  color: #e5f9f7;
+  text-decoration: none;
+  border: none;
+  padding: 0.125em 1.25em;
+  line-height: 30px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(244, 37, 243, 1) 1.4%,
+    rgba(244, 87, 1, 1) 36.2%,
+    rgba(255, 204, 37, 1) 72.2%,
+    rgba(20, 196, 6, 1) 113%
+  );
+  background-size: 400%;
+  animation: animate 10s infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 50%;
+  }
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+.linear-btn:hover {
+  animation: animate 3s infinite;
+}
+
+/* Linear Button End */
+
+/* Radial Button Start */
+
+.radial-btn {
+  font-size: 1.25em;
+  padding: 0.125em 1.25em;
+  text-decoration: none;
+  color: rgb(215, 236, 255);
+  line-height: 30px;
+  background: rgb(131, 58, 180);
+  background: radial-gradient(
+    circle,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  background-size: 400%;
+  animation: animate 15s infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 50%;
+  }
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+.radial-btn:hover {
+  animation: animate 3s infinite;
+}
+
+/* Radial Button End */
+
+/* Rainbow Button Start */
+
+.rainbow-btn {
+  font-size: 1.25em;
+  padding: 0.125em 0.75em;
+  text-decoration: none;
+  color: white;
+  line-height: 30px;
+  border: 1px solid white;
+}
+
+.rainbow-btn:hover {
+  box-shadow: inset 18px 0 2px red, inset 36px 0 2px orange,
+    inset 54px 0 2px yellow, inset 72px 0 2px green, inset 90px 0 2px aqua,
+    inset 108px 0 2px blue, inset 126px 0 2px blueviolet;
+  border: none;
+  line-height: 34px;
+  color: black;
+  transition: 0.5s ease-out;
+}
+
+/* Rainbow Button End */
+
+/* Cross button Start */
+
+.cross-btn {
+  font-size: 1.25em;
+  padding: 0.125em 0.75em;
+  text-decoration: none;
+  color: lightcoral;
+  line-height: 30px;
+  position: relative;
+  border-bottom: 3px solid lightcoral;
+}
+
+.cross-btn:hover {
+  border-bottom: 3px solid rgb(243, 83, 128);
+  background-color: transparent;
+  transition: 0.2s ease;
+  color: rgb(243, 83, 128);
+}
+
+.cross-btn::before {
+  content: "";
+  position: absolute;
+  top: 133%;
+  left: 4%;
+  width: 100px;
+  height: 3px;
+  z-index: -1;
+  transform: rotate(2deg);
+  background-color: lightcoral;
+}
+
+.cross-btn::after {
+  content: "";
+  position: absolute;
+  top: 115%;
+  left: 4%;
+  width: 106px;
+  height: 3px;
+  z-index: -1;
+  background-color: lightcoral;
+  transform: rotate(-5deg);
+}
+
+.cross-btn:hover::before {
+  background-color: rgb(243, 83, 128);
+  transition: 0.2s ease;
+}
+.cross-btn:hover::after {
+  background-color: rgb(243, 83, 128);
+  transition: 0.2s ease;
+}
+
+/* Cross Button End */
+
+/* Side-Border Button Start */
+
+.side-border-btn {
+  font-size: 1.25em;
+  padding: 0.125em 0.75em;
+  text-decoration: none;
+  color: rgb(240, 197, 128);
+  line-height: 30px;
+  position: relative;
+  border-bottom: 3px solid rgb(240, 197, 128);
+}
+
+.side-border-btn:hover {
+  border-bottom: 3px solid rgb(240, 197, 128);
+  background-color: transparent;
+  transition: 1s ease;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+}
+
+.side-border-btn::before {
+  content: "";
+  position: absolute;
+  top: 63%;
+  left: -30%;
+  width: 40px;
+  height: 3px;
+  transform: rotate(45deg);
+  background-color: rgb(240, 197, 128);
+}
+
+.side-border-btn::after {
+  content: "";
+  position: absolute;
+  top: 63%;
+  left: 93%;
+  width: 40px;
+  height: 3px;
+  background-color: rgb(240, 197, 128);
+  transform: rotate(-45deg);
+}
+
+.side-border-btn:hover::before {
+  background-color: rgb(240, 197, 128);
+  transition: 1s ease;
+  transform: rotate(135deg);
+  width: 100px;
+  top: 40%;
+  left: -15%;
+  z-index: -1;
+}
+.side-border-btn:hover::after {
+  background-color: rgb(240, 197, 128);
+  transition: 1s ease;
+  transform: rotate(-135deg);
+  width: 100px;
+  top: 40%;
+  left: 25%;
+  z-index: -1;
+}
+
+/* Side-Border Button End */
