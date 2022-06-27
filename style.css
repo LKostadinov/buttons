@@ -521,28 +521,45 @@ button {
 
 /* Radial Button End */
 
-/* Rainbow Button Start */
+/* Rotated Button Start */
 
-.rainbow-btn {
+.rotated-btn {
   font-size: 1.25em;
   padding: 0.125em 0.75em;
   text-decoration: none;
-  color: white;
-  line-height: 30px;
-  border: 1px solid white;
-}
-
-.rainbow-btn:hover {
-  box-shadow: inset 18px 0 2px red, inset 36px 0 2px orange,
-    inset 54px 0 2px yellow, inset 72px 0 2px green, inset 90px 0 2px aqua,
-    inset 108px 0 2px blue, inset 126px 0 2px blueviolet;
-  border: none;
-  line-height: 34px;
   color: black;
-  transition: 0.5s ease-out;
+  line-height: 30px;
+  border: 3px solid white;
+  position: relative;
+  transform: rotateY(-30deg) rotateX(25deg) rotateZ(-6deg) scale(1.03);
 }
 
-/* Rainbow Button End */
+.rotated-btn-inner {
+  width: 110%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: -5%;
+  transform: rotateY(30deg) rotateX(10deg) rotateZ(9deg);
+  z-index: -1;
+}
+
+.rotated-btn:hover {
+  transform: none;
+  transition: 0.2s;
+}
+
+.rotated-btn:hover .rotated-btn-inner {
+  transform: none;
+  transition: 0.2s;
+  width: 99.5%;
+  border: 1px solid black;
+  left: 0;
+  z-index: -1;
+}
+
+/* Rotated Button End */
 
 /* Cross button Start */
 
