@@ -6,6 +6,7 @@
 
 body {
   background-color: rgb(76, 72, 72);
+  margin: 5em auto;
   overflow-x: hidden;
 }
 
@@ -19,7 +20,7 @@ body {
 .row-one {
   display: flex;
   justify-content: space-between;
-  margin-top: 15em;
+  margin-top: 10em;
 }
 
 /* Green Neon Button Start */
@@ -271,7 +272,7 @@ body {
 .row-two {
   display: flex;
   justify-content: space-between;
-  margin-top: 15em;
+  margin-top: 10em;
 }
 
 button {
@@ -341,7 +342,7 @@ button {
 .row-three {
   display: flex;
   justify-content: space-between;
-  margin-top: 15em;
+  margin-top: 10em;
 }
 
 /* Delete Button Start */
